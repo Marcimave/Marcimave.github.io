@@ -14,3 +14,16 @@ h1 {
   color: green ;
   text-align: center ;
 }
+
+
+
+
+
+
+/* FOOTER */
+footer {
+  background-color: #1e1e1e;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
