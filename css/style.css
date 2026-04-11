@@ -27,9 +27,13 @@ h2::before {
   counter-increment: section;
   content: counter(section, upper-roman) ". ";
 }
-.bloc {
-  counter-reset: section;
+
+/* 🚫 Supprimer le numéro pour ce titre */
+h2.no-number::before {
+  content: "";
+  counter-increment: none;
 }
+
 
 
 /* FOOTER */
