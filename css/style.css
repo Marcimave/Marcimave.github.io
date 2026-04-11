@@ -1,5 +1,6 @@
 body{
   background-color: lightblue;
+  counter-reset: section;
 }
 
 img{
@@ -20,9 +21,11 @@ h2 {
 #p1 {
   text-align: center;
 }
+
+
 h2::before {
-  counter-increment: subsection;
-  content: counter(section, upper-roman) "." counter(subsection, upper-roman) " ";
+  counter-increment: section;
+  content: counter(section, upper-roman) ". ";
 }
 
 
