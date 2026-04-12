@@ -16,7 +16,12 @@ h2.no-number::before {
   content: "";
   counter-increment: none;
 }
-
+#t1{
+  color: yellow;
+}
+#t2{
+  color: blue;
+}
 
 img{
   width:100%;
