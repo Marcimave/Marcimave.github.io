@@ -17,7 +17,7 @@ h2.no-number::before {
   counter-increment: none;
 }
 .no-number.yellow {
-  color: red;
+  color: yellow;
 }
 
 .no-number.bleu {
