@@ -16,13 +16,7 @@ h2.no-number::before {
   content: "";
   counter-increment: none;
 }
-.no-number.yellow {
-  color: yellow;
-}
 
-h2.no-number.bleu {
-  color: blue;
-}
 
 img{
   width:100%;
