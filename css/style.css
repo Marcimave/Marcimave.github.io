@@ -20,7 +20,7 @@ h2.no-number::before {
   color: yellow;
 }
 
-.no-number.bleu {
+h2.no-number.bleu {
   color: blue;
 }
 
