@@ -1,6 +1,16 @@
-body{
-  background-color: lightblue;
+body {
   counter-reset: section;
+}
+
+h2::before {
+  counter-increment: section;
+  content: counter(section, upper-roman) ". ";
+}
+
+/* 🚫 Supprimer le numéro pour ce titre */
+h2.no-number::before {
+  content: "";
+  counter-increment: none;
 }
 
 img{
@@ -20,18 +30,6 @@ h2 {
 
 #p1 {
   text-align: center;
-}
-
-
-h2::before {
-  counter-increment: section;
-  content: counter(section, upper-roman) ". ";
-}
-
-/* 🚫 Supprimer le numéro pour ce titre */
-h2.no-number::before {
-  content: "";
-  counter-increment: none;
 }
 
 
