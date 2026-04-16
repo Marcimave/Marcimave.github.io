@@ -1,4 +1,4 @@
-body {
+/*body {
   counter-reset: section;
 }
 
@@ -11,7 +11,7 @@ h2::before {
   content: counter(section, upper-roman) ". ";
 }
 
-/* 🚫 Supprimer le numéro pour ce titre */
+* 🚫 Supprimer le numéro pour ce titre *
 h2.no-number::before {
   content: "";
   counter-increment: none;
@@ -44,16 +44,17 @@ h2 {
 
 
 
-/* FOOTER */
+*FOOTER*
 footer {
   background-color: #1e1e1e;
   color: white;
   text-align: center;
   padding: 15px;
-}
+} */
 
 
 /* RESET */
+
 * {
   margin: 0;
   padding: 0;
