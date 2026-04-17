@@ -280,3 +280,7 @@ footer {
     margin: 10px 0;
   }
 }
+ul.no-number::before {
+  content: "";
+  counter-increment: none;
+}
