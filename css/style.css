@@ -129,7 +129,7 @@ img:hover {
 }
 
 .hero h2 {
-  font-size: 32px;
+  font-size: 24px;
   margin-bottom: 20px;
 }
 
@@ -227,7 +227,7 @@ input, textarea {
   padding: 10px;
   border-radius: 8px;
   border: 1px solid #ccc;
-  font-size: 24px;
+  font-size: 18px;
 }
 
 input:focus, textarea:focus {
@@ -268,7 +268,7 @@ footer {
 /* RESPONSIVE */
 @media (max-width: 600px) {
   h1 {
-    font-size: 32px;
+    font-size: 24px;
   }
 
   .carte {
