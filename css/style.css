@@ -1,53 +1,50 @@
 /*body {
   counter-reset: section;
-}
+} */
 
-.bloc {
+/* .bloc {
   counter-reset: section;
-}
+} */
 
-h2::before {
+/* h2::before {
   counter-increment: section;
   content: counter(section, upper-roman) ". ";
-}
+} */
 
-* 🚫 Supprimer le numéro pour ce titre *
+/* 🚫 Supprimer le numéro pour ce titre *
 h2.no-number::before {
   content: "";
   counter-increment: none;
-}
-#t1{
+} */
+/* #t1{
   color: yellow;
-}
-#t2{
+} */
+/* #t2{
   color: blue;
-}
+} */
 
-img{
+/* img{
   width:100%;
   border-radius: 10px;
-}
+} */
     
   
-h1 {ul {
-  display: inline-block;
-  text-align: left;
-}
+/* h1 {
   color: green ;
   text-align: center ;
-}
+} */
   
-h2 {
+/* h2 {
   text-align: center ;
-}
+} */
 
-#p1 {
+/* #p1 {
   text-align: center;
-}
+} */
 
 
 
-*FOOTER*
+/* FOOTER
 footer {
   background-color: #1e1e1e;
   color: white;
