@@ -1103,7 +1103,37 @@ Ces crises ont réduit les recettes et augmenté les dépenses.
   <p>&copy; 2026 - Site éducatif</p>
 </footer>
 
-<script src="js/script.js"> 
+<script src="js/script.js">const form = document.getElementById("formulaire");
+const confirmation = document.getElementById("confirmation");
+
+form.addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const nom = document.getElementById("nom").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const message = document.getElementById("message").value.trim();
+
+  if (!nom || !email || !message) {
+    confirmation.style.color = "red";
+    confirmation.textContent = "Veuillez remplir tous les champs.";
+    return;
+  }
+
+  emailjs.send("service_t379mfh", "TON_TEMPLATE_ID", {
+    nom: nom,
+    email: email,
+    message: message
+  })
+  .then(function() {
+    confirmation.style.color = "green";
+    confirmation.textContent = "Message envoyé avec succès !";
+    form.reset();
+  }, function(error) {
+    confirmation.style.color = "red";
+    confirmation.textContent = "Erreur lors de l'envoi...";
+    console.log(error);
+  });
+});
 </script>
 <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 
