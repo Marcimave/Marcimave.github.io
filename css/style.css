@@ -284,7 +284,8 @@ footer {
 ul {
   display: inline-block;
   text-align: left;
-  }
+  font-size: 18px;
+}
 
 .carte.active {
   border: 2px solid orange;
