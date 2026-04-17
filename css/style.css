@@ -29,7 +29,10 @@ img{
 }
     
   
-h1 {
+h1 {ul {
+  display: inline-block;
+  text-align: left;
+}
   color: green ;
   text-align: center ;
 }
@@ -282,5 +285,6 @@ footer {
 }
 
 ul {
-  text-align: initial;
-}
+  display: inline-block;
+  text-align: left;
+  }
