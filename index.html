@@ -1068,13 +1068,34 @@ Ces crises ont réduit les recettes et augmenté les dépenses.
   
 <!-- Project -->
  
-<script src="js/script.js"></script>
 </main>
 
 <footer>
   <p>&copy; 2026 - Site éducatif</p>
 </footer>
   
+<script src="js/script.js">
+const form = document.getElementById("formulaire");
+const confirmation = document.getElementById("confirmation");
 
+form.addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const nom = document.getElementById("nom").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const message = document.getElementById("message").value.trim();
+
+  if (!nom || !email || !message) {
+    confirmation.style.color = "red";
+    confirmation.textContent = "Veuillez remplir tous les champs.";
+    return;
+  }
+
+  confirmation.style.color = "green";
+  confirmation.textContent = "Message envoyé avec succès !";
+
+  form.reset();
+});
+</script>
 </body>
 </html>
