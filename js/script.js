@@ -13,9 +13,16 @@ document.getElementById("formulaire").addEventListener("submit", function(e) {
     document.getElementById("confirmation").innerText =
       "Message envoyé avec succès ✅";
   })
+    /*
   .catch(function(error) {
     document.getElementById("confirmation").innerText =
       "Erreur lors de l’envoi ❌";
     console.log(error);
   });
+}); */
+    
+.catch(function(error) {
+  console.log("ERREUR COMPLETE :", error);
+  document.getElementById("confirmation").innerText =
+    "Erreur : " + error.text;
 });
