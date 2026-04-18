@@ -18,7 +18,7 @@ form.addEventListener("submit", function(e) {
     return;
   }
 
-  emailjs.send("service_t379mfh", "template_kwa4moh", {
+  emailjs.send("service_icixjxf", "template_kwa4moh", {
     name: name,
     email: email,
     title: title,
