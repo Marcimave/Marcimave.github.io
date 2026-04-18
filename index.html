@@ -1140,73 +1140,35 @@
      
      </section>
  
-    
-<section class="contact">
+  <section class="contact">
+
   <form id="formulaire">
 
-  <label>Nom</label>
-  <input type="text" name="name" required>
+    <label>Nom</label>
+    <input type="text" id="name" name="name" required>
 
-  <label>Email</label>
-  <input type="email" name="email" required>
+    <label>Email</label>
+    <input type="email" id="email" name="email" required>
 
-  <label>Sujet</label>
-  <input type="text" name="title" required>
+    <label>Sujet</label>
+    <input type="text" id="title" name="title" required>
 
-  <label>Message</label>
-  <textarea name="message" required></textarea>
+    <label>Message</label>
+    <textarea id="message" name="message" required></textarea>
 
-  <button type="submit">Envoyer</button>
+    <button type="submit">Envoyer</button>
 
-</form>
+  </form>
 
-<p id="confirmation"></p>
-    
-    <p id="confirmation"></p>
- </section>
-  
-<!-- Project -->
- 
-</main>
+  <p id="confirmation"></p>
 
-<footer>
-  <p>&copy; 2026 - Site éducatif</p>
-</footer>
+</section>
 
-<script src="js/script.js">const form = document.getElementById("formulaire");
-const confirmation = document.getElementById("confirmation");
-
-form.addEventListener("submit", function(e) {
-  e.preventDefault();
-
-  const nom = document.getElementById("nom").value.trim();
-  const email = document.getElementById("email").value.trim();
-  const message = document.getElementById("message").value.trim();
-
-  if (!nom || !email || !message) {
-    confirmation.style.color = "red";
-    confirmation.textContent = "Veuillez remplir tous les champs.";
-    return;
-  }
-
-  emailjs.send("service_t379mfh", "TON_TEMPLATE_ID", {
-    nom: nom,
-    email: email,
-    message: message
-  })
-  .then(function() {
-    confirmation.style.color = "green";
-    confirmation.textContent = "Message envoyé avec succès !";
-    form.reset();
-  }, function(error) {
-    confirmation.style.color = "red";
-    confirmation.textContent = "Erreur lors de l'envoi...";
-    console.log(error);
-  });
-});
-</script>
-  
+<!-- EmailJS -->
 <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-<script src="js/script.js"></script>
+
+<!-- Ton script -->
+<script src="js/script.js" defer></script>
+
 </body>
 </html>
