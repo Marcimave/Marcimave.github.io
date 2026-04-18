@@ -1,12 +1,12 @@
-// Initialisation EmailJS
-emailjs.init("TON_PUBLIC_KEY");
+// Initialisation EmailJS avec ta PUBLIC KEY
+emailjs.init("_Rsd7tKRnqGXz8u19");
 
 document.getElementById("formulaire").addEventListener("submit", function(e) {
   e.preventDefault();
 
   emailjs.sendForm(
     "service_t379mfh",
-    "template_kwa4moh", // 👈 TON TEMPLATE
+    "template_kwa4moh", // ton template choisi
     this
   )
   .then(function() {
