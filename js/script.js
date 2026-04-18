@@ -30,8 +30,8 @@ form.addEventListener("submit", function(e) {
     form.reset();
   })
   .catch(function(error) {
-    confirmation.style.color = "red";
-    confirmation.textContent = "Erreur lors de l’envoi ❌";
-    console.log(error);
-  });
+  console.log("ERREUR COMPLETE :", error);
+  confirmation.style.color = "red";
+  confirmation.textContent = "Erreur : " + error.text;
+});
 });
