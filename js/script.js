@@ -1,28 +1,37 @@
-// Initialisation EmailJS avec ta PUBLIC KEY
+// Initialisation EmailJS
 emailjs.init("_Rsd7tKRnqGXz8u19");
 
-document.getElementById("formulaire").addEventListener("submit", function(e) {
+const form = document.getElementById("formulaire");
+const confirmation = document.getElementById("confirmation");
+
+form.addEventListener("submit", function(e) {
   e.preventDefault();
 
-  emailjs.sendForm(
-    "service_t379mfh",
-    "template_kwa4moh", // ton template choisi
-    this
-  )
-  .then(function() {
-    document.getElementById("confirmation").innerText =
-      "Message envoyé avec succès ✅";
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const title = document.getElementById("title").value.trim();
+  const message = document.getElementById("message").value.trim();
+
+  if (!name || !email || !title || !message) {
+    confirmation.style.color = "red";
+    confirmation.textContent = "Veuillez remplir tous les champs.";
+    return;
+  }
+
+  emailjs.send("service_t379mfh", "template_kwa4moh", {
+    name: name,
+    email: email,
+    title: title,
+    message: message
   })
-    /*
+  .then(function() {
+    confirmation.style.color = "green";
+    confirmation.textContent = "Message envoyé avec succès ✅";
+    form.reset();
+  })
   .catch(function(error) {
-    document.getElementById("confirmation").innerText =
-      "Erreur lors de l’envoi ❌";
+    confirmation.style.color = "red";
+    confirmation.textContent = "Erreur lors de l’envoi ❌";
     console.log(error);
   });
-}); */
-    
-.catch(function(error) {
-  console.log("ERREUR COMPLETE :", error);
-  document.getElementById("confirmation").innerText =
-    "Erreur : " + error.text;
 });
