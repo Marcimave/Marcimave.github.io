@@ -302,3 +302,7 @@ p {
 #f {
   font-size:24px ;
 }
+
+li {
+  margin-bottom: 10px;
+}
