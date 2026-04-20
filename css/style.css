@@ -323,3 +323,7 @@ article {
   margin-bottom: 20px;
 }
 
+h1 {
+  text-decoration: underline;
+  font-weight: bold;
+}
